@@ -1,8 +1,9 @@
 {
-  "name": "bullish",
-  "license": "UNLICENSED",
+  "name": "bullish-bear-subgraph",
+  "version": "0.0.1",
+  "license": "MIT",
   "scripts": {
-    "codegen": "graph codegen",
+    "codegen": "graph codegen --debug --output-dir src/entities/",
     "build": "graph build",
     "deploy": "graph deploy --node https://api.studio.thegraph.com/deploy/ bullish",
     "create-local": "graph create --node http://localhost:8020/ bullish",

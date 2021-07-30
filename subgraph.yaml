@@ -1,4 +1,5 @@
-specVersion: 0.0.1
+specVersion: 0.0.2
+description: Bullish Bear's NFT Assets
 schema:
   file: ./schema.graphql
 dataSources:
@@ -8,25 +9,18 @@ dataSources:
     source:
       address: "0xF6a4Ab28074688469158D1233b468c34b53e4935"
       abi: BullishBear
+      startBlock: 9022879
     mapping:
       kind: ethereum/events
-      apiVersion: 0.0.2
+      apiVersion: 0.0.4
       language: wasm/assemblyscript
+      file: ./src/bear.ts
       entities:
-        - Approval
-        - ApprovalForAll
-        - OwnershipTransferred
-        - Transfer
+        - Bear
+        - Account
       abis:
         - name: BullishBear
-          file: ./abis/BullishBear.json
+          file: ./abis/bear.json
       eventHandlers:
-        - event: Approval(indexed address,indexed address,indexed uint256)
-          handler: handleApproval
-        - event: ApprovalForAll(indexed address,indexed address,bool)
-          handler: handleApprovalForAll
-        - event: OwnershipTransferred(indexed address,indexed address)
-          handler: handleOwnershipTransferred
         - event: Transfer(indexed address,indexed address,indexed uint256)
-          handler: handleTransfer
-      file: ./src/mapping.ts
+          handler: handleBearTransfer
