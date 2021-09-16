@@ -5,11 +5,11 @@ schema:
 dataSources:
   - kind: ethereum/contract
     name: BullishBear
-    network: rinkeby
+    network: mainnet
     source:
-      address: "0xF6a4Ab28074688469158D1233b468c34b53e4935"
+      address: "0xA825Cb5b7546C0898B04a2f7e63f53efb6769D4b"
       abi: BullishBear
-      startBlock: 9022879
+      startBlock: 13044740
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4

@@ -41,7 +41,7 @@ function createAccount(addr: Address): void {
 }
 
 function getBearId(id: BigInt): string {
-  return "BullishBear - " + id.toString();
+  return "BullishBears - " + id.toString();
 }
 
 function isMint(event: Transfer): boolean {
